@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name AtariWiiWifi)(type Legacy)(uri ${KIPRJMOD}/AtariWiiWifi.lib)(options "")(descr ""))
+  (lib (name Esp)(type Legacy)(uri C:/Users/Ryan/KiCad/Projects/duneRacerESC/MCU_Module.lib)(options "")(descr ""))
+)

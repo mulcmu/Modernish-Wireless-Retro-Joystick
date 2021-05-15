@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name AtariWiiWifi)(type KiCad)(uri ${KIPRJMOD}/AtariWiiWifi.pretty)(options "")(descr ""))
+)
