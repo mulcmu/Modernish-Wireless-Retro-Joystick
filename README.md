@@ -4,7 +4,7 @@
 ## Goals & Objectives:
 
 - Support for 2 Atari style joystick DB-9 connections.  Directions, Trigger, and two analog (variable resistance) values.
-- Use Wiimote, Nunchuk , gamepad for input devices.  Configurable input setup options to accommodate different homebrew hardware.  (Like Wiimote tile sensor used like paddle controller rotation.)
+- Use Wiimote, Nunchuk , gamepad for input devices.  Configurable input setup options to accommodate different homebrew hardware.  (Like Wiimote tilt sensor used like paddle controller rotation.)
 - Increase distance of busy little hands from vintage hardware.
 
 ## Current Status:
