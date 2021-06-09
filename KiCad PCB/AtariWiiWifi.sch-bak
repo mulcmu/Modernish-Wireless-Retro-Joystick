@@ -4,10 +4,10 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Atari Wii ESP32 Interfae"
+Date "5/15/21"
+Rev "2"
+Comp "mulcmu"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -191,7 +191,7 @@ F 3 "https://www.nxp.com/docs/en/data-sheet/PCAL6416A.pdf" H 6150 2550 50  0001 
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 1125 6050 1125
+	4500 1125 5200 1125
 Wire Wire Line
 	6050 1125 6050 1600
 Wire Wire Line
@@ -323,29 +323,20 @@ Wire Wire Line
 	9650 3475 9550 3475
 Connection ~ 9550 3475
 Wire Wire Line
-	8550 2600 8725 2600
+	8550 2600 8625 2600
 Wire Wire Line
-	8725 2600 8725 3475
-Connection ~ 8725 3475
+	8550 2200 8625 2200
 Wire Wire Line
-	8725 3475 8925 3475
+	8625 2200 8625 2600
 Wire Wire Line
-	8550 2200 8725 2200
-Wire Wire Line
-	8725 2200 8725 2600
-Connection ~ 8725 2600
-Wire Wire Line
-	10050 2575 10250 2575
-Wire Wire Line
-	10250 2575 10250 3475
+	10050 2575 10150 2575
 Wire Wire Line
 	10250 3475 9650 3475
 Connection ~ 9650 3475
 Wire Wire Line
-	10050 2175 10250 2175
+	10050 2175 10150 2175
 Wire Wire Line
-	10250 2175 10250 2575
-Connection ~ 10250 2575
+	10150 2175 10150 2575
 Text Label 8725 1725 1    50   ~ 0
 J1_PotB
 Text Label 8825 1725 1    50   ~ 0
@@ -543,7 +534,6 @@ NoConn ~ 4175 6575
 NoConn ~ 4175 6675
 NoConn ~ 4175 6775
 NoConn ~ 4175 6875
-NoConn ~ 4175 6975
 NoConn ~ 5425 6975
 NoConn ~ 5425 6875
 NoConn ~ 5425 6775
@@ -645,8 +635,6 @@ Wire Wire Line
 Wire Wire Line
 	8425 3475 8425 3800
 Connection ~ 8425 3475
-Wire Wire Line
-	8425 3475 8725 3475
 Wire Wire Line
 	9250 2025 8925 2025
 Wire Wire Line
@@ -759,4 +747,88 @@ Wire Wire Line
 Wire Wire Line
 	4875 3300 4500 3300
 Connection ~ 4500 3300
+Text Notes 6650 2625 1    50   ~ 0
+0x20
+Text Notes 7750 2025 1    50   ~ 0
+0x2F
+Text Notes 9250 2025 1    50   ~ 0
+0x2C
+Wire Wire Line
+	8425 3475 8925 3475
+$Comp
+L power:+5V #PWR0106
+U 1 1 60C1B4FC
+P 5200 800
+F 0 "#PWR0106" H 5200 650 50  0001 C CNN
+F 1 "+5V" H 5215 973 50  0000 C CNN
+F 2 "" H 5200 800 50  0001 C CNN
+F 3 "" H 5200 800 50  0001 C CNN
+	1    5200 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 800  5200 1125
+Connection ~ 5200 1125
+Wire Wire Line
+	5200 1125 6050 1125
+$Comp
+L power:+5V #PWR0107
+U 1 1 60C24824
+P 8625 1400
+F 0 "#PWR0107" H 8625 1250 50  0001 C CNN
+F 1 "+5V" H 8640 1573 50  0000 C CNN
+F 2 "" H 8625 1400 50  0001 C CNN
+F 3 "" H 8625 1400 50  0001 C CNN
+	1    8625 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0108
+U 1 1 60C254AD
+P 10150 1400
+F 0 "#PWR0108" H 10150 1250 50  0001 C CNN
+F 1 "+5V" H 10165 1573 50  0000 C CNN
+F 2 "" H 10150 1400 50  0001 C CNN
+F 3 "" H 10150 1400 50  0001 C CNN
+	1    10150 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 2175 10150 1400
+Connection ~ 10150 2175
+Wire Wire Line
+	8625 2200 8625 1400
+Connection ~ 8625 2200
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 60C38241
+P 2900 6650
+F 0 "J3" V 2962 6694 50  0000 L CNN
+F 1 "Conn_01x02_Male" V 3053 6694 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 2900 6650 50  0001 C CNN
+F 3 "~" H 2900 6650 50  0001 C CNN
+	1    2900 6650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4175 6975 2900 6975
+Wire Wire Line
+	2900 6975 2900 6850
+Wire Wire Line
+	2800 6850 2800 6975
+Wire Wire Line
+	2800 6975 2275 6975
+Wire Wire Line
+	2275 6975 2275 6750
+$Comp
+L power:+5V #PWR0109
+U 1 1 60C55DB0
+P 2275 6750
+F 0 "#PWR0109" H 2275 6600 50  0001 C CNN
+F 1 "+5V" H 2290 6923 50  0000 C CNN
+F 2 "" H 2275 6750 50  0001 C CNN
+F 3 "" H 2275 6750 50  0001 C CNN
+	1    2275 6750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
