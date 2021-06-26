@@ -18,4 +18,9 @@ K I2C TWI IO expander
 F https://www.nxp.com/docs/en/data-sheet/PCAL6416A.pdf
 $ENDCMP
 #
+$CMP TXS0104E
+D 4-Bit Bidirectional Voltage-Level Shifter
+K Level-Shifter CMOS-TTL-Translation
+$ENDCMP
+#
 #End Doc Library
